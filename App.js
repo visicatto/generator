@@ -1,21 +1,13 @@
-import { View } from 'react-native'
-
-
-
-let charset = "0123456789@#$"
+import { NavigationContainer } from '@react-navigation/native'
+import { Routes } from './src/routes'
 
 
 
 export default function App(){
- 
-
-
-
   return(
-    <View>
-
-
-    </View>
+    <NavigationContainer>      
+      <Routes/>
+    </NavigationContainer>
 
   )
 }
