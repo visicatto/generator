@@ -14,11 +14,11 @@ export function Routes() {
                 options={{
                     tabBarShowLabel: false,
                     headerShown: false,
-                    tabBarIcon: ({ focused, size, color }) => {
+                    tabBarIcon: ({ focused, size }) => {
                         if (focused) {
-                            return <Ionicons size={size} color={color} name="home" />
+                            return <Ionicons size={size} color={'black'} name="home" />
                         }
-                        return <Ionicons size={size} color={color} name="home-outline" />
+                        return <Ionicons size={size} color={'black'} name="home-outline" />
                     }
                 }}
             />
@@ -28,11 +28,11 @@ export function Routes() {
                 options={{
                     tabBarShowLabel: false,
                     headerShown: false,
-                    tabBarIcon: ({ focused, size, color }) => {
+                    tabBarIcon: ({ focused, size }) => {
                         if (focused) {
-                            return <Ionicons size={size} color={color} name="lock-closed" />
+                            return <Ionicons size={size} color={'black'} name="lock-closed" />
                         }
-                        return <Ionicons size={size} color={color} name="lock-closed-outline" />
+                        return <Ionicons size={size} color={'black'} name="lock-closed-outline" />
                     }
                 }}
             />

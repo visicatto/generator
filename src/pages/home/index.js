@@ -43,7 +43,7 @@ export function Home(){
         minimumValue={6}
         maximumValue={20}
         maximumTrackTintColor="black"
-        minimumTrackTintColor="blue"
+        minimumTrackTintColor="black"
         value={size}
         onValueChange={(value) => setSize(value.toFixed(0)) }        
         />
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
   padding: 1,
 },
 button:{
-  backgroundColor:"blue",
+  backgroundColor:"grey",
   width: "80%",
   height: 50,
   alignItems: 'center',
@@ -98,7 +98,8 @@ button:{
   marginBottom: 18
 },
 buttonText:{
-  color: "white",
+  color: "black",
   fontSize: 20,
+  fontWeight: 'bold'
 }
 })

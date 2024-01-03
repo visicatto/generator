@@ -10,8 +10,6 @@ const useStorage = () => {
             console.log("Error to find", error)
             return [];
         }
-
-
     }
 
     const saveItem = async (key, value) => {
@@ -24,9 +22,7 @@ const useStorage = () => {
 
         } catch (error) {
             console.log("Error to save", error);
-
         }
-
     }
 
     const removeItem = async (key, item) => {
@@ -42,7 +38,6 @@ const useStorage = () => {
         } catch (error) {
             console.log("Error to delete", error)
         }
-
     }
 
     return {
@@ -50,9 +45,6 @@ const useStorage = () => {
         saveItem,
         removeItem,
     }
-
-
-
 }
 
 export default useStorage;
