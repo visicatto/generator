@@ -1,14 +1,21 @@
-import { Text, View, StyleSheet, Pressable } from 'react-native'
+import { Text, StyleSheet, View, Pressable } from 'react-native'
 import React from 'react'
+import { Feather } from "@expo/vector-icons"
 
 export function PasswordItem({ data, removePassword }) {
 
     return (
-        <Pressable onLongPress={removePassword} style={styles.container}>
-            <Text style={styles.text}>{data}</Text>
-        </Pressable>
-    )
+        <View>
+            <Pressable onLongPress={removePassword} style={styles.container}>
 
+                <Text style={styles.text}
+                    secureTextEntry={true}
+                >{data}</Text>
+                <Feather name={"trash-2"} style={styles.icon} />
+
+            </Pressable>
+        </View>
+    )
 }
 
 const styles = StyleSheet.create({
@@ -24,5 +31,11 @@ const styles = StyleSheet.create({
     },
     text: {
         color: "#FFF"
+    },
+    icon: {
+        width: "8%",
+        fontSize: 20,
+        color: 'red'
+
     }
 })

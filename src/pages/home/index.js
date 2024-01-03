@@ -51,7 +51,7 @@ export function Home(){
       </View>
 
       <TouchableOpacity style={styles.button} onPress={generatePassword}>
-        <Text style={styles.buttonText}>Gerar senha</Text>
+        <Text style={styles.buttonText}>Generate Password</Text>
       </TouchableOpacity>
 
       <Modal visible={modalVisible} animationType='fade' transparent={true}>
