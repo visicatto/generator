@@ -1,18 +1,30 @@
-import { Text, StyleSheet, View, Pressable } from 'react-native'
-import React from 'react'
-import { Feather } from "@expo/vector-icons"
+import React, { useState } from 'react';
+import { Text, StyleSheet, View, Pressable } from 'react-native';
+import { AntDesign } from "@expo/vector-icons"
 
 export function PasswordItem({ data, removePassword }) {
+    const [isPasswordVisible, setPasswordVisibility] = useState(false);
+    const togglePasswordVisibility = () => {
+        setPasswordVisibility(!isPasswordVisible);
+    };
+
+    const renderPassword = () => {
+        if (isPasswordVisible) {
+            return data;
+        } else {
+            return "*".repeat(data.length);
+        }
+    };
 
     return (
         <View>
             <Pressable onLongPress={removePassword} style={styles.container}>
-
-                <Text style={styles.text}
-                    secureTextEntry={true}
-                >{data}</Text>
-                <Feather name={"trash-2"} style={styles.icon} />
-
+                <Text style={styles.text}>
+                    {renderPassword()}
+                </Text>
+                <Pressable onPress={togglePasswordVisibility}>
+                    <AntDesign name={isPasswordVisible ? 'eye' : 'eyeo'} style={styles.icon} />
+                </Pressable>
             </Pressable>
         </View>
     )
@@ -33,9 +45,10 @@ const styles = StyleSheet.create({
         color: "#FFF"
     },
     icon: {
-        width: "8%",
-        fontSize: 20,
-        color: 'red'
+        width: "100%",
+        fontSize: 30,
+       
+        color: 'black'
 
     }
 })
